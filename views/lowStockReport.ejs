@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Low Stock Report</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Low Stock Report</h1>
+      <nav class="navbar">
+        <a href="/dashboard">Back to Dashboard</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+
+    <section style="margin-top: 20px">
+      <% if (items.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% items.forEach(item => { %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.category %></td>
+            <td><%= item.quantity %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } else { %>
+      <p>No low stock items found.</p>
+      <% } %>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2024 MZR. All rights reserved |
+        <a href="/">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>

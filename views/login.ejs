@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Inventory Management</h1>
+      <h3 style="text-align: center">
+        Please Login/Register to access Dashboard
+      </h3>
+      <form
+        style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)"
+        action="/login"
+        method="POST"
+      >
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          name="email"
+          required
+        /><br />
+
+        <input
+          placeholder="Password"
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="/signup">Sign up</a>.</p>
+    </div>
+    <footer>
+      <p>
+        &copy; 2024 MZR. All rights reserved |
+        <a href="/privacy-policy">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>

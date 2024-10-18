@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form
+        style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)"
+        action="/signup"
+        method="POST"
+      >
+        <input
+          placeholder="Name"
+          style="width: 90%"
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+
+        <input
+          placeholder="Email"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+
+        <input
+          placeholder="Password"
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
+        <br />
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="/login">Login here</a>.</p>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2024 MZR. All rights reserved |
+        <a href="/privacy-policy">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>

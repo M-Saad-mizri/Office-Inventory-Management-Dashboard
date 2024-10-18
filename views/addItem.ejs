@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Add New Item</title>
+  </head>
+  <body>
+    <header>
+      <h1>Add New Item</h1>
+      <nav class="navbar">
+        <a href="/dashboard">Back to Dashboard</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+    <form
+      style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin-top: 20px"
+      action="/items/add"
+      method="POST"
+      class="add-item-form"
+    >
+      <input
+        style="width: 90%"
+        placeholder="Item Name"
+        type="text"
+        id="name"
+        name="name"
+        required
+        class="form-input"
+      />
+
+      <input
+        style="width: 90%"
+        placeholder="Category"
+        type="text"
+        id="category"
+        name="category"
+        class="form-input"
+      />
+
+      <input
+        style="width: 90%"
+        placeholder="Quantity"
+        type="number"
+        id="quantity"
+        name="quantity"
+        required
+        class="form-input"
+      />
+
+      <input
+        style="width: 90%"
+        placeholder="Stock Threshold"
+        type="number"
+        id="stockThreshold"
+        name="stockThreshold"
+        required
+        class="form-input"
+      />
+
+      <div class="button-group">
+        <!-- Button to add item and stay on add new item page -->
+        <button
+          type="submit"
+          name="redirectTo"
+          value="add"
+          class="btn btn-secondary"
+        >
+          Add Item
+        </button>
+        <!-- Button to add item and go to dashboard -->
+        <button
+          type="submit"
+          name="redirectTo"
+          value="dashboard"
+          class="btn btn-primary"
+        >
+          Add Item & Go to Dashboard
+        </button>
+      </div>
+    </form>
+
+    <footer>
+      <p>
+        &copy; 2024 MZR. All rights reserved |
+        <a href="/privacy-policy">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>
